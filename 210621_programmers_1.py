@@ -11,9 +11,7 @@
 # 5	24	"TUE"
 
 def solution(a, b):
-    mon = ['FRI','SAT','SUN','MON','TUE','WED','THU']
-    day = [31,29,31,30,31,30,31,31,30,31,30,31]
+    day = ['FRI','SAT','SUN','MON','TUE','WED','THU']
+    mon = [31,29,31,30,31,30,31,31,30,31,30,31]
     
-    answer = mon[(sum(day[:a-1]) + b) % 7 - 1]
-    
-    return answer
+    return day[(sum(mon[:a-1]) + b) % 7 - 1]
