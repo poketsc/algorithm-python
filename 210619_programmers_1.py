@@ -61,3 +61,10 @@ def solution(lottos, win_nums):
     answer.append(lottos_dict[min_count])
 
     return answer
+
+
+def solution2(lottos, win_nums):
+
+    rank = [6,6,5,4,3,2,1]
+
+    return [rank[len(set(win_nums) & set(lottos)) + lottos.count(0)], rank[len(set(win_nums) & set(lottos))]]
